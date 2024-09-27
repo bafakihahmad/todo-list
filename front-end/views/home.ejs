@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="/css/home.css" />
+  </head>
+  <body class="app">
+    <div id="app-content">
+      <nav>
+        <header>
+          <h1 id="title">Todo List</h1>
+        </header>
+      </nav>
+      <main>
+        <div id="searchForm">
+          <form action="/add-todo" method="post">
+            <input
+              type="text"
+              name="work"
+              required
+              placeholder="Enter your todo"
+            />
+            <button type="submit">ADD</button>
+          </form>
+        </div>
+        <!-- Check if the todos array has any elements -->
+        <% if (todos.length > 0) { %>
+        <div id="list">
+          <ul>
+            <!-- Loop through the todos array and display each todo -->
+            <% for (let i = 0; i < todos.length; i++) { %> <% if (todos[i].state
+            === false) { %>
+            <li class="todo-item">
+              <h2><%= todos[i].work %></h2>
+              <form action="/complete-task" method="POST">
+                <input type="hidden" name="todoIndex" value="<%= i %>" />
+                <button type="submit">Trash</button>
+              </form>
+            </li>
+            <% } %> <% } %>
+          </ul>
+        </div>
+        <% } %>
+      </main>
+    </div>
+  </body>
+</html>

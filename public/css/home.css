@@ -1,0 +1,109 @@
+/* Main container styling */
+.app {
+  text-align: center;
+  width: 60%;
+  margin: 5% auto;
+  background-color: darkcyan;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
+}
+
+/* Title and Search Bar shared background */
+#app-content nav,
+#searchForm {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px; /* Space between search bar and todo list */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds depth */
+}
+
+/* Styling for the title (h1) */
+#title {
+  text-align: center;
+  font-size: 2.5em;
+  color: #333;
+  margin: 0;
+}
+
+/* Styling for search bar container */
+#searchForm {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin-top: 10px; /* Space between title and search bar */
+}
+
+/* Input field styling */
+#searchForm input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px; /* Space between input and Add button */
+}
+
+/* Add button styling */
+#searchForm button {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 18px; /* Slightly larger padding */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em; /* Increased font size for button text */
+}
+
+#searchForm button:hover {
+  background-color: #45a049;
+}
+
+/* Styling for the list of todos */
+#list ul {
+  background-color: aliceblue;
+  list-style-type: none; /* Remove bullets */
+  margin: 0;
+  padding: 0;
+  text-align: left; /* Aligns text to the left */
+}
+
+/* Todo item styling */
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Styling for the todo work (h2) */
+.todo-item h2 {
+  margin: 0;
+  font-size: 1.5em; /* Increased font size */
+}
+
+/* Trash button styling */
+.todo-item button {
+  background-color: #ff6666;
+  color: white;
+  border: none;
+  padding: 10px 15px; /* Larger padding for a bigger button */
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.1em; /* Increased font size for the button */
+}
+
+.todo-item button:hover {
+  background-color: #ff3333;
+}
+
+/* Adjusting margins and spacing between todo list and search bar */
+#list {
+  margin-top: 20px;
+}
+
+/* Optional: hover effect on todo items for better UX */
+.todo-item:hover {
+  background-color: #f0f0f0;
+}
